@@ -17,16 +17,7 @@ var Gmail = function(localJQuery) {
         $ = localJQuery;
     } else if (typeof jQuery !== "undefined") {
         $ = jQuery;
-    } else {
-        // try load jQuery through node.
-        try {
-            $ = require("jquery");
-        }
-        catch(err) {
-            // else leave $ undefined, which may be fine for some purposes.
-        }
-    }
-
+    } 
     var window_opener = typeof (window) !== "undefined" ? window.opener : null;
     if (window_opener) {
         try {
